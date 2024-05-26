@@ -22,6 +22,19 @@ repos:
         name: End of file fixer
       - id: trailing-whitespace
         name: Trailing whitespace
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.28.4
+    hooks:
+      - id: check-github-actions
+        name: Validate GitHub Actions
+        args: ["--verbose"]
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        name: Codespell Spell Checker
+        additional_dependencies:
+          - tomli
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.4.5
     hooks:
