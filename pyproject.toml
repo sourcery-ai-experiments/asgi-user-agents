@@ -154,8 +154,7 @@ ignore_missing_imports = true
 
 
 [tool.codespell]
-skip = './tests/**/*.json'
-
+ignore-words-list = "CrOS"
 
 [tool.coverage.run]
 source_pkgs = ["asgi_user_agents", "tests"]
