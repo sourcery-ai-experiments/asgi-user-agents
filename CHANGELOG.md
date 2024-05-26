@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 
 * Initial release.
 
-## Added
+### Added
 
 * CI/CD Pipelines added. by [@hasansezertasan](https://github.com/hasansezertasan) in [#1](https://github.com/hasansezertasan/asgi-user-agents/pull/1)
 * Update branch names on CI/CD Pipelines. by [@hasansezertasan](https://github.com/hasansezertasan) in [#2](https://github.com/hasansezertasan/asgi-user-agents/pull/2)
