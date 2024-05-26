@@ -154,8 +154,7 @@ ignore_missing_imports = true
 
 
 [tool.codespell]
-skip = './tests/assets/*'
-count = true
+skip = './tests/assets/*,'
 
 
 [tool.coverage.run]
