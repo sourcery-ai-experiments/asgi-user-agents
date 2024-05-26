@@ -154,7 +154,7 @@ ignore_missing_imports = true
 
 
 [tool.codespell]
-skip = './tests/assets/*,'
+skip = './tests/**/*.json'
 
 
 [tool.coverage.run]
