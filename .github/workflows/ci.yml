@@ -17,6 +17,8 @@ jobs:
         run: hatch run types:all
       - name: Run Tests
         run: hatch test -a
+      - name: Run Coverage
+        run: hatch test --cover
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
         with:
