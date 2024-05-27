@@ -58,22 +58,22 @@ extra-dependencies = [
   "uvicorn>=0.20.0, <0.29.0",
   "pre-commit>=3.0.0, <4.0.0",
 ]
-
 [tool.hatch.envs.default.scripts]
 start = "uvicorn example.main:app --reload"
 pre = "pre-commit run --all-files --hook-stage manual --show-diff-on-failure"
 
-[[tool.hatch.envs.types.matrix]]
-python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
 [tool.hatch.envs.types]
-extra-dependencies = ["mypy>=1.0.0", "ruff==0.4.5"]
-
+extra-dependencies = ["mypy>=1.0.0", "ruff==0.4.5", "codespell==2.3.0"]
+[[tool.hatch.envs.types.matrix]]
+python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
 [tool.hatch.envs.types.scripts]
 typing = "mypy --install-types --non-interactive {args:src/asgi_user_agents tests}"
 style = ["ruff check {args:.}"]
 format = ["ruff format {args:.}"]
-all = ["typing", "style", "format"]
+spelling = "codespell ."
+all = ["spelling", "typing", "style", "format"]
+
 
 [tool.hatch.envs.hatch-test]
 extra-dependencies = [
@@ -90,11 +90,11 @@ extra-dependencies = [
 [[tool.hatch.envs.hatch-test.matrix]]
 python = ["3.8", "3.9", "3.10", "3.11", "3.12"]
 
+
 [tool.ruff]
 target-version = "py38"
 show-fixes = true
 fix = true
-
 [tool.ruff.lint]
 select = [
   "A",
@@ -135,7 +135,6 @@ select = [
 ]
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
-
 [tool.ruff.format]
 # Like Black, use double quotes for strings.
 quote-style = "double"
@@ -145,15 +144,17 @@ indent-style = "space"
 skip-magic-trailing-comma = false
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
-
-
 [tool.ruff.lint.isort]
 known-first-party = ["asgi_user_agents"]
+
 
 [tool.mypy]
 disallow_untyped_defs = true
 ignore_missing_imports = true
 
+
+[tool.codespell]
+ignore-words-list = "CrOS"
 
 [tool.coverage.run]
 source_pkgs = ["asgi_user_agents", "tests"]
