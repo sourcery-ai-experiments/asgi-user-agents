@@ -8,11 +8,24 @@ The format is based on [Keep a Changelog], and this project adheres to [Semantic
 
 * Nothing yet.
 
+## [0.2.0] - 2024-05-26
+
+### Internal
+
+* 🔧 Update CI workflow, by adding `codecov/codecov-action`. by [@hasansezertasan](https://github.com/hasansezertasan) in [#13](https://github.com/hasansezertasan/asgi-user-agents/pull/13)
+* 🔧 Update CI workflow, by adding `Run Coverage` step. by [@hasansezertasan](https://github.com/hasansezertasan) in [#14](https://github.com/hasansezertasan/asgi-user-agents/pull/14)
+* 🔧 Update CI workflow, by adding `files: .coverage` configuration to `Upload coverage reports to Codecov` step so the action can properly upload the coverage report. by [@hasansezertasan](https://github.com/hasansezertasan) in [#15](https://github.com/hasansezertasan/asgi-user-agents/pull/15)
+
+### Changed
+
+* Bump `Development Status` classifier from `1 - Planning` to `3 - Alpha`. by [@hasansezertasan](https://github.com/hasansezertasan) in [#16](https://github.com/hasansezertasan/asgi-user-agents/pull/16)
+* Release 0.2.0 by [@hasansezertasan](https://github.com/hasansezertasan) in [#17](https://github.com/hasansezertasan/asgi-user-agents/pull/17)
+
 ## [0.1.0] - 2024-05-26
 
 * Initial release.
 
-## Added
+### Added
 
 * CI/CD Pipelines added. by [@hasansezertasan](https://github.com/hasansezertasan) in [#1](https://github.com/hasansezertasan/asgi-user-agents/pull/1)
 * Update branch names on CI/CD Pipelines. by [@hasansezertasan](https://github.com/hasansezertasan) in [#2](https://github.com/hasansezertasan/asgi-user-agents/pull/2)
